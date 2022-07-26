@@ -1,11 +1,13 @@
-let array = [0, 1, 2, 3, 4];
+//* Описание задачи: Напишите функцию, которая возвращает вложенный массив вида`[[key, value], [key, value]]`.
+//* Ожидаемый результат: ({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+
+let getArray(obj) {
+  return Object.entries(obj);
+}
+
 let obj = {
-  foo() {
-    console.log("Good");
-  },
-  key: 123,
+  a: 1,
+  b: 2,
 };
 
-let { foo: key } = obj;
-
-console.log(key);
+console.log(getArray(obj));
