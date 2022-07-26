@@ -1,5 +1,7 @@
-//Перепиши функцию так, чтобы она принимала один объект параметров, вместо набора независимых аргументов.
-function printContactsInfo(names, phones) {
+//Перепиши функцию так, чтобы она принимала один объект параметров,
+//вместо набора независимых аргументов.
+function printContactsInfo(obj) {
+  let { names, phones } = obj;
   const nameList = names.split(",");
   const phoneList = phones.split(",");
   for (let i = 0; i < nameList.length; i += 1) {

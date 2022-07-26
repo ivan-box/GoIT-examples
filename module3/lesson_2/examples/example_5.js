@@ -2,7 +2,16 @@
 //чтобы она возвращала новый объект контакта с добавленными свойствами id и createdAt,
 //а также list со значением "default" если в partialContact нет такого свойства.
 
-function createContact(partialContact) {}
+function createContact(partialContact) {
+  let obj = {
+    list: "default",
+    createdAt: Date.now(),
+    id: generateId(),
+    ...partialContact,
+  };
+
+  return obj;
+}
 
 console.log(
   createContact({
